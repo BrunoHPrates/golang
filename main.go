@@ -21,8 +21,8 @@ func main(){
 	rangeThree := score[:3]
 	fmt.Println(rangeThree)
 
-	var superherois = []string{"Deadpool", "Motoqueiro Fantasma"}
+	var superherois = []string{"Deadpool", "Homem -aranha", "Motoqueiro Fantasma"}
 	fmt.Println(superherois)
-	superherois = append(superherois, "Ben 10")
+	superherois = append(superherois, "Ben 10", "Mulher Maravilha")
 	fmt.Println(superherois, len(superherois), cap(superherois))
 }
