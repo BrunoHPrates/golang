@@ -1,19 +1,36 @@
 package main
 
-import ("fmt")
+import (
+	"fmt"
+)
 
-func main(){
-	numeros:= [10]float32{}
-	fmt.Println("Digite 5 números números.")
-	fmt.Println("Digite o primeiro número:")
-	fmt.Scan(&numeros[0])
-	fmt.Println("Digite o segundo número:")
-	fmt.Scan(&numeros[1])
-	fmt.Println("Digite o terceiro número:")
-	fmt.Scan(&numeros[2])
-	fmt.Println("Digite o quarto número:")
-	fmt.Scan(&numeros[3])
-	fmt.Println("Digite o quinto número:")
-	fmt.Scan(&numeros[4])
-	fmt.Println("A soma dos números é", numeros[0]+numeros[1]+numeros[2]+numeros[3]+numeros[4])
+func main() {
+	age := 45
+	fmt.Println(age <= 50)
+	fmt.Println(age >= 50)
+	fmt.Println(age == 50)
+	fmt.Println(age != 50)
+
+	if age < 30 {
+		fmt.Print("Menor que 30 anos")
+	} else if age < 40 {
+		fmt.Print("Menor que 40 anos")
+	} else {
+		fmt.Print("Não é menor que 40 anos")
+	}
+
+	names := []string{"Miles Morales", "Peter Parker", "Tony Stark", "Steve Rogers", "T'Challa", "Bruno"}
+
+	for index, value := range names {
+		if index == 1 {
+			fmt.Println("continue após a posição", index, "e valor", value)
+			continue
+		}
+		if index > 2 {
+			fmt.Println("sair após", index)
+			break
+		}
+
+		fmt.Println("Valor:", value)
+	}
 }
